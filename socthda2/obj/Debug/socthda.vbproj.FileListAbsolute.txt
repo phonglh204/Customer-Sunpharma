@@ -1,0 +1,13 @@
+D:\BinCus\DPCanGio\socthda.exe
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.vbprojAssemblyReference.cache
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmCust.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmDate2.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmDate.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmPass.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmPrint.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmSearch.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.frmVoucher.resources
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.vbproj.GenerateResource.cache
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.vbproj.CoreCompileInputs.cache
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.vbproj.CopyComplete
+D:\VS\Custom\DPCanGio\socthda\obj\Debug\socthda.exe
