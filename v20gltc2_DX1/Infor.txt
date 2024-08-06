@@ -1,0 +1,3 @@
+﻿Báo cáo kết quả sản xuất kinh doanh theo phiếu xuất bán
+Nội dung customize: 
+1. Thay store procedure từ fs20_IncomeStatementPart1 thành sp20IncomeStatementPart1_DX1

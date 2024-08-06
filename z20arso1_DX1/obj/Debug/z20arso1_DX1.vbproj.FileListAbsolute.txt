@@ -1,0 +1,13 @@
+D:\VS\Bin\z20arso1_DX1.exe.config
+D:\VS\Bin\z20arso1_DX1.exe
+D:\VS\Bin\z20arso1_DX1.pdb
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.vbprojAssemblyReference.cache
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\arso1.frmFilter.resources
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.vbproj.GenerateResource.cache
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.vbproj.CoreCompileInputs.cache
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.vbproj.CopyComplete
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.exe
+D:\VS\Custom\DPCanGio\z20arso1_DX1\obj\Debug\z20arso1_DX1.pdb
+D:\Bin\z20arso1_DX1.exe.config
+D:\Bin\z20arso1_DX1.exe
+D:\Bin\z20arso1_DX1.pdb

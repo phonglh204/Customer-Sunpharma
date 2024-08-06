@@ -1,0 +1,10 @@
+D:\BinCus\DPCanGio\v20gltc2_DX1.exe
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\v20gltc2_DX1.vbprojAssemblyReference.cache
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\frmDirInfor.resources
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\frmFilter.resources
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\frmReport.resources
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\frmReportInfo.resources
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\v20gltc2_DX1.vbproj.GenerateResource.cache
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\v20gltc2_DX1.vbproj.CoreCompileInputs.cache
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\v20gltc2_DX1.vbproj.CopyComplete
+D:\VS\Custom\DPCanGio\v20gltc2_DX1\obj\Debug\v20gltc2_DX1.exe
