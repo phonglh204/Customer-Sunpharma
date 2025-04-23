@@ -140,8 +140,10 @@ Public Class frmVoucher
     Private noldThue, noldThue_nt As Decimal
     Private oCrTaxAccount As VoucherLibObj
     Private oTaxCodeDetail As VoucherLibObj
-    Private hddt_update As dirkeylib
+    'Private hddt_update As dirkeylib
     Public rpTable As DataTable
+    Private oInv_Update As dirkeylib
+    Private strKey_Inv_Update As String
 #End Region
 #Region "Form design"
     Public Sub New()
@@ -242,7 +244,6 @@ Public Class frmVoucher
         xtabControl.ReadOnlyTabControls(False, Me.tbDetail)
         xtabControl.ScatterMemvarBlankTabControl(Me.tbDetail)
         Me.oSite.Key = ("ma_dvcs = '" & Strings.Trim(Me.txtMa_dvcs.Text) & "'")
-        Me.hddt_update.Key = ("ma_dvcs = '" & Strings.Trim(Me.txtMa_dvcs.Text) & "'")
         Me.vCaptionRefresh()
         If oOption("m_sd_hddt") = "1" Then
             oEIInvoice.ResetTabAuthor()
@@ -894,6 +895,12 @@ Public Class frmVoucher
         Dim _stt_rec As String
         _stt_rec = Sql.GetValue(appConn, "cttt20", "stt_rec", "stt_rec_tt='" + tblMaster.Item(Me.iMasterRow).Item("stt_rec") + "'")
         Dim flag As Boolean = (_stt_rec <> "")
+        If ((ObjectType.ObjTst(modVoucher.oOption.Item("m_pay_rec_type"), "1", False) = 0) AndAlso flag) Then
+            Msg.Alert(StringType.FromObject(modVoucher.oVar.Item("m_inv_not_edit")), 2)
+            Me.cmdSave.Enabled = False
+            'ElseIf ((Me.txtsl_in.Value > 0) AndAlso (ObjectType.ObjTst(Msg.Question(StringType.FromObject(modVoucher.oLan.Item("712")), 1), 0, False) = 0)) Then
+            '    Me.cmdSave.Enabled = False
+        End If
         Me.txtTk.ReadOnly = flag
         Me.oldtblDetail = clsvoucher.clsVoucher.Copy2Table(modVoucher.tblDetail)
         Me.iOldMasterRow = Me.iMasterRow
@@ -921,14 +928,7 @@ Public Class frmVoucher
             xtabControl.ReadOnlyTabControls(False, Me.tbDetail)
             Me.EDTrans()
             Me.oSite.Key = ("ma_dvcs = '" & Strings.Trim(Me.txtMa_dvcs.Text) & "'")
-            Me.hddt_update.Key = ("ma_dvcs = '" & Strings.Trim(Me.txtMa_dvcs.Text) & "'")
 
-            If ((ObjectType.ObjTst(modVoucher.oOption.Item("m_pay_rec_type"), "1", False) = 0) AndAlso flag) Then
-                Msg.Alert(StringType.FromObject(modVoucher.oVar.Item("m_inv_not_edit")), 2)
-                Me.cmdSave.Enabled = False
-            ElseIf ((Me.txtsl_in.Value > 0) AndAlso (ObjectType.ObjTst(Msg.Question(StringType.FromObject(modVoucher.oLan.Item("712")), 1), 0, False) = 0)) Then
-                Me.cmdSave.Enabled = False
-            End If
             If oOption("m_sd_hddt") = "1" Then
                 oEIInvoice.ReadOnlyTabAuthor()
                 'If isEditHDDT = "1" Then
@@ -1402,7 +1402,10 @@ Public Class frmVoucher
             oEIInvoice = New clsEIInvoice(txtMa_kh, sysConn, appConn, Me, oOption, tbDetail)
         End If
         Dim kieu_update As New CharLib(Me.txtLoai_hd_phathanh, "0,1,2")
-        hddt_update = New dirkeylib(Me.txtStt_rec_hd_update, lblTen_hd_update, sysConn, appConn, "vctgt20", "stt_rec", "ten_hddt", "EOutputVAT", "1=1", True, Me.cmdEdit)
+        'Dim hddt As New DirLib(Me.txtStt_rec_hd_update, lblTen_hd_update, sysConn, appConn, "vTaxVcNo", "VcIDChar", "EVcName", "EVcNo", "ma_dvcs='" + Reg.GetRegistryKey("DFUnit").ToString.Trim + "'", True, Me.cmdEdit)
+        strKey_Inv_Update = "ma_dvcs='" + Reg.GetRegistryKey("DFUnit").ToString.Trim + "'"
+        oInv_Update = New dirkeylib(Me.txtStt_rec_hd_update, lblTen_hd_update, sysConn, appConn, "vTaxVcNo", "VcIDChar", "EVcName", "EVcNo", strKey_Inv_Update, True, Me.cmdEdit)
+        AddHandler Me.txtStt_rec_hd_update.Enter, New EventHandler(AddressOf Me.txtStt_rec_hd_update_Enter)
     End Sub
 
     Private Function GetComputerName() As String
@@ -6619,6 +6622,14 @@ Public Class frmVoucher
             Catch ex As Exception
             End Try
         End With
+    End Sub
+    Private Sub txtStt_rec_hd_update_Enter(ByVal sender As Object, ByVal e As EventArgs)
+        Try
+            strKey_Inv_Update = Sql.GetValue(appConn, "select dbo.fsGetInv4Update(" + Sql.ConvertVS2SQLType(Reg.GetRegistryKey("DFUnit").ToString.Trim, "") + "," + Sql.ConvertVS2SQLType(Me.txtMa_kh.Text.Trim, "") + "," + Sql.ConvertVS2SQLType(Me.txtNgay_lct.Value, "") + ")").ToString.Trim
+        Catch ex As Exception
+            strKey_Inv_Update = "ma_dvcs='" + Reg.GetRegistryKey("DFUnit").ToString.Trim + "'"
+        End Try
+        oInv_Update.Key = strKey_Inv_Update
     End Sub
 End Class
 

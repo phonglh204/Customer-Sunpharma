@@ -37,3 +37,15 @@ G:\VS\Custom\DPCanGio\socthda2\obj\Debug\socthda2.vbproj.GenerateResource.cache
 G:\VS\Custom\DPCanGio\socthda2\obj\Debug\socthda2.vbproj.CoreCompileInputs.cache
 G:\VS\Custom\DPCanGio\socthda2\obj\Debug\socthda2.vbproj.CopyComplete
 G:\VS\Custom\DPCanGio\socthda2\obj\Debug\socthda2.exe
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.vbproj.AssemblyReference.cache
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmCust.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmDate2.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmDate.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmPass.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmPrint.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmSearch.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.frmVoucher.resources
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.vbproj.GenerateResource.cache
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.vbproj.CoreCompileInputs.cache
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.vbproj.CopyComplete
+C:\VS\Custom\Sunpharma\socthda2\obj\Debug\socthda2.exe
